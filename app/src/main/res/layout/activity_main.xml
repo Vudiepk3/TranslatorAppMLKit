@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -17,32 +16,51 @@
         android:textStyle="bold"
         android:layout_marginBottom="8dp"/>
 
+    <Spinner
+        android:id="@+id/inputLanguageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/rounded_edittext"
         android:layout_marginBottom="16dp"
-        android:autofillHints=""
         android:hint="@string/enter_text"
         android:inputType="text"
         android:padding="12dp"
         android:textSize="20sp"
         android:gravity="start"/>
 
-   <Button
-       android:id="@+id/translateButton"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="@string/translate"
-       android:backgroundTint="@color/blue"
-       android:textColor="@color/white"
-       android:padding="12dp"
-       android:textSize="16sp"
-       android:layout_marginBottom="16dp"
-       android:layout_gravity="center_horizontal">
+    <Spinner
+        android:id="@+id/outputLanguageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
 
-   </Button>
+    <Button
+        android:id="@+id/translateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/translate"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- ProgressBar hiển thị trạng thái tải -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
+
     <TextView
         android:id="@+id/output"
         android:layout_width="wrap_content"
@@ -51,8 +69,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         android:padding="12dp"
-        android:textColor="@color/blue">
-    </TextView>
+        android:textColor="@color/blue"/>
 
     <TextView
         android:id="@+id/outputText"
@@ -63,5 +80,20 @@
         android:gravity="start"
         android:hint="@string/enter_text"
         android:padding="12dp"
-        android:textSize="20sp" />
+        android:textSize="20sp"/>
+
+    <!-- Clear Button -->
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
+        android:padding="12dp"
+        android:layout_gravity="center_horizontal"
+        android:stateListAnimator="@null"/>
+
 </LinearLayout>
